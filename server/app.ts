@@ -14,6 +14,7 @@ import config from './config';
 import MediathekManager from './MediathekManager';
 import renderImpressum from './pages/impressum';
 import RSSFeedGenerator from './RSSFeedGenerator';
+import RSSFeedGeneratorLow from './RSSFeedGenerator_low';
 import SearchEngine from './SearchEngine';
 import * as utils from './utils';
 
@@ -51,6 +52,8 @@ const impressum = renderImpressum(config.contact);
 
   const mediathekManager = new MediathekManager();
   const rssFeedGenerator = new RSSFeedGenerator(searchEngine);
+  const rssFeedGeneratorLow = new RSSFeedGeneratorLow(searchEngine);
+
 
   const indexing = false;
   let lastIndexingState;
